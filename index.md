@@ -81,3 +81,14 @@ One of the best parts about Github is that you can view how other people set up 
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
+
+# Starter Project
+For my starter project, I created the Useless Box. This is a plain box with a single lever on the top of it. When this lever is flipped, an arm comes out of the box, flipping it back, and then going back into the box, reverting it to it's previous state. Additionally, an LED in the box turns green when the lever is flipped and the arm is moving towards it, red when the arm has hti the lever and is moving back into the box, and turns off when the arm is back in the box.
+
+The project largely works due to one PCB, connecting the lever, LED, motor, and batteries. Additionally, there is a switch that is pressed by the arm when the box is closed, due the the unique shape of the arm. The LED is red when the lever is in its default state, green when the lever has been flipped by the user, but off when the swithc is pressed. The batteries power the LED and motor, and the determines the state of the LED and the rotation direction of the motor.
+
+When the lever is flicked by the user, the motor rotates, moving the arm towards the lever and away from the switch, causing the LED to turn green and the arm to rotate towards the lever. When the arms hits the lever, the LED changes to red and the motor starts rotating in the opposite direction, moving the arm back down until it reaches it default state. In this state, the switch is pressed, turning the LED off. Surrounding the electronics is a black box, with a flush door on the top. The hoor has a hinge placed in a way so that the arm will push the door up when it flicks the lever, closing the door after it moves back down.
+
+**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
