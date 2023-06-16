@@ -1,5 +1,5 @@
 # Computer Vision Robot
-My project is a Ball Tracking Robot that utilizes Computer Vision. It is a three-wheeled robot that utilizes ultrasonic sensors to detect a red ball and both turn and move towards it.
+My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes ultrasonic sensors to detect a red ball and both turn and move toward it. It does this using a Raspberry Pi 4 where code is loaded and run, determining when each of the motors should run depending on the output of the ultrasonic sensors. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
