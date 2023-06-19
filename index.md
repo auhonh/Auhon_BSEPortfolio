@@ -34,7 +34,7 @@ For your second milestone, explain what you've worked on since your previous mil
 # First Milestone - all wiring and assembly done (?)
 For my first milestone, I finished wiring the full robot, as well as assembly of the chassis. As of right now, the wheels are connected to motors that are mounted on the plastic chassis. These motors, as well as a battery pack, are connected to an H-bridge. This H-bridge is connected to a Raspberry Pi 4, so the Raspberry Pi can control the motors. Additionally, the Raspberry Pi is connected to 3 ultrasonic sensors, which provide visual input. 
 
-The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, soldering irons, and electrical tape in order to mount them properly. My plan to finish this mainly consists of organizing and modifying the wires further. Additionally, I need to write code for the sensors to detect a red ball, and load it onto the Raspberry Pi. 
+The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, soldering irons, and electrical tape in order to mount them properly. My plan to finish this mainly consists of writing code for the sensors to detect a red ball, and load it onto the Raspberry Pi. Additionally, I need to organize and modify the wires further. 
 
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
