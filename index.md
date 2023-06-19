@@ -8,7 +8,8 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](logo.svg)
-  
+
+<!--
 # Final Milestone - working robot + custom chassis (?)
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
@@ -30,7 +31,7 @@ For your second milestone, explain what you've worked on since your previous mil
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+-->
 # First Milestone - all wiring and assembly done (?)
 For my first milestone, I finished wiring the full robot, as well as assembly of the chassis. As of right now, the wheels are connected to motors that are mounted on the plastic chassis. These motors, as well as a battery pack, are connected to an H-bridge. This H-bridge is connected to a Raspberry Pi 4, so the Raspberry Pi can control the motors. Additionally, the Raspberry Pi is connected to 3 ultrasonic sensors, which provide visual input. 
 
