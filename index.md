@@ -38,7 +38,7 @@ For my first milestone, I assembled the chassis of the robot and wired the robot
 
 The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. As of right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis that would accommodate the various electronics better.
 
-video here
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <!--
 # Schematics 
