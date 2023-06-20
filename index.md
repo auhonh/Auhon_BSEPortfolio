@@ -33,7 +33,7 @@ For your second milestone, explain what you've worked on since your previous mil
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 -->
 
-# First Milestone - all wiring and assembly done (?)
+# First Milestone - all wiring and assembly done
 For my first milestone, I assembled the chassis of the robot and wired the robot. As of right now, the wheels are connected to motors that are mounted on the plastic chassis. These motors, as well as a battery pack, are connected to an H-bridge. This H-bridge is connected to a Raspberry Pi 4, so it can control the motors. Additionally, the Raspberry Pi is connected to three ultrasonic sensors and a camera, which provide visual input, and a power bank. 
 
 The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. As of right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis that would accommodate the various electronics better.
