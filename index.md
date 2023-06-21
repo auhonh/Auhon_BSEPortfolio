@@ -34,11 +34,11 @@ For your second milestone, explain what you've worked on since your previous mil
 -->
 
 # First Milestone - all wiring and assembly done
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 For my first milestone, I assembled the chassis of the robot and wired the robot. As of right now, the wheels are connected to motors that are mounted on the plastic chassis. These motors, as well as a battery pack, are connected to an H-bridge. This H-bridge is connected to a Raspberry Pi 4, so it can control the motors. Additionally, the Raspberry Pi is connected to three ultrasonic sensors and a camera, which provide visual input, and a power bank. 
 
 The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. As of right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis that would accommodate the various electronics better.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <!--
 # Schematics 
@@ -362,10 +362,12 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 -->
 
 # Starter Project
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z2-qvxFV8pM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 For my starter project, I created the Useless Box. This is a plain box with a single lever on the top of it. When this lever is flipped, an arm comes out of the box, flipping it back, and then going back into the box, reverting it to it's previous state. Additionally, an LED in the box turns green when the lever is flipped and the arm is moving towards it, red when the arm has hit the lever and is moving back into the box, and turns off when the arm is back in the box.
 
 The major components of this project are a PCB, connecting a lever, an LED, a motor, and batteries. Additionally, there is a switch that is pressed by the arm when the box is closed, due the the unique shape of the arm. The LED is red when the lever is in its default state, green when the lever has been flipped by the user, but off when the switch is pressed. The batteries power the LED and motor, and the lever determines the state of the LED and the rotation direction of the motor. Surrounding the electronics is a black box, with a flush door on the top. The hoor has a hinge placed in a way so that the arm will push the door up when it flicks the lever and close the door after it moves back down.
 
 When the lever is flicked by the user, the motor rotates, moving the arm towards the lever and away from the switch, causing the LED to turn green and the arm to rotate towards the lever. When the arms hits the lever, the LED changes to red and the motor starts rotating in the opposite direction, moving the arm back down until it reaches it default state. In this state, the switch is pressed, turning the LED off. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z2-qvxFV8pM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
