@@ -20,25 +20,38 @@ For your final milestone, explain the outcome of your project. Key details to in
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
 
-# Second Milestone - code loaded onto raspberry pi (?)
+# Second Milestone - object tracking finished
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
+In my second milestone, I finished all the code related to tracking objects-in this case-a red ball. This code is made possible by the Raspberry Pi camera module and the three ultrasonic sensors. The first thing I did was get all of the camera-related code working, which consists of returning input, and locating the center of the red ball. For the ultrasonic sensors, I intended to find the distance that the nearest object was from each sensor. 
+
+Before coding anything, I had to get Raspberry Pi OS loaded onto the Pi and find a way to code on it without a monitor. To install its OS, I simply inserted a microSD card into my computer and used the Raspberry Pi website to load the OS onto the card. Following this, I removed the card from my computer and moved it into the Pi itself. I still had to find a way to code on it though, so I plugged the Pi into my computer with a capture card. After this, I used a program primarily used for Twitch streaming, OBS, to screencast the Raspberry Pi to my laptop, allowing me to code on it.
+
+Now that I could code, getting the camera to return input was relatively easy because of its direct connection to the Raspberry Pi through a ribbon cable. All I had to do was make a variable to store the camera, and I could use it. The tricky part was getting the camera to track the red ball. I did this by taking each frame of the camera, eroding and diluting it until the frame until all colors that were not a specific shade of red were set to black, and making that shade of red white. Once I had this done, I located any oval that was that shade of red and created a bounding box around it. Once I had done this, I used simple geometry to locate the center of this rectangle. 
+
+Once the camera-related code was finished, I needed to find how close each ultrasonic sensor was to the nearest object. There are a total of three sensors, one facing left, one facing right, and one facing forward. To begin, I powered each sensor by plugging their VCC and Ground pins into a breadboard, which I powered using pins on the Raspberry Pi. To get input, I plugged the Trigger and Echo pins directly into the Raspberry Pi. I then used these pins to find the time it took for a pulse to be sent forward and reflected back to the sensor. I then used math to convert the pulse length into centimeters, so I now have the distance from each sensor to the nearest object. 
+
+Now, these numbers mean nothing on their own, so I have to use the center of the rectangle and the distances to direct the motors when to run. For example, if the center of the ball is too far left or right, the motors need to turn in that direction, or if the ball is too far, then the robot needs to move towards it. Additionally, I still need to 3D print the new chassis from my first milestone.
+
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
--->
 
 # First Milestone - all wiring and assembly done
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For my first milestone, I assembled the chassis of the robot and wired the robot. As of right now, the wheels are connected to motors that are mounted on the plastic chassis. These motors, as well as a battery pack, are connected to an H-bridge. This H-bridge is connected to a Raspberry Pi 4, so it can control the motors. Additionally, the Raspberry Pi is connected to three ultrasonic sensors and a camera, which provide visual input, and a power bank. 
+For my first milestone, I assembled and wired the robot. The components of my robot are divided into three sections: Movement, Core, and Visuals. For Movement, I have two generic DC motors, two motor-powered wheels, a swiveling wheel, a plastic chassis, and an L298 H-Bridge motor driver. The Core section contains two battery packs, a switch, a generic breadboard, and a Raspberry Pi 4. As for Visuals, it contains a Raspberry Pi camera module and three Arduino ultrasonic sensors. 
 
-The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. As of right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis that would accommodate the various electronics better.
+Currently, the Movement section has two motor-powered wheels  mounted to the DC motors. These are in turn mounted to the back of the plastic chassis. The swivel wheel is attached to the front of the chassis with standoffs, and the H-Bridge is wired to the motors and the Raspberry Pi. For the Core section, there are two battery packs connected to the switch, which powers the H-bridge and Raspberry Pi when turned on. Additionally, the Raspberry Pi supplies power to the camera module and breadboard, the latter of which powers all of the ultrasonic sensors. The final section, Visuals, has the camera module connected to the Raspberry Pi with its ribbon cable, powering it. The ultrasonic sensors have their VCC and Ground wires plugged into the breadboard, so the Raspberry Pi can power them, and the Trigger and Echo wires connect directly to the Raspberry Pi, providing input. 
+
+The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. Right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis to better accommodate the various electronics.
 
 <!--
 # Schematics 
