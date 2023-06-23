@@ -37,13 +37,6 @@ Once the camera-related code was finished, I needed to find how close each ultra
 
 Now, these numbers mean nothing on their own, so I have to use the center of the rectangle and the distances to direct the motors when to run. For example, if the center of the ball is too far left or right, the motors need to turn in that direction, or if the ball is too far, then the robot needs to move towards it. Additionally, I still need to 3D print the new chassis from my first milestone.
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
-
-
 # First Milestone - all wiring and assembly done
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
