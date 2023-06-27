@@ -22,10 +22,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 -->
 
-# Second Milestone - object tracking finished
-<!--
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
--->
+# Second Milestone - Object Tracking Finished
+<iframe width="560" height="315" src="https://www.youtube.com/embed/smtitpBq4H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For my second milestone, I finished all the code related to tracking objects, in this case, a red ball. This code is made possible by the Raspberry Pi camera module and the three ultrasonic sensors. The first thing I did was get all of the camera-related code working, which consists of returning input, and locating the center of the red ball. For the ultrasonic sensors, I intended to find the distance that the nearest object was from each sensor. 
 
@@ -37,7 +35,7 @@ Once the camera-related code was finished, I needed to find how close each ultra
 
 Now, these numbers mean nothing on their own, so I have to use the center of the rectangle and the distances to direct the motors when to run. For example, if the center of the ball is too far left or right, the motors need to turn in that direction, or if the ball is too far, then the robot needs to move towards it. Additionally, I still need to finish CADing and 3D printing the new chassis from my first milestone.
 
-# First Milestone - all wiring and assembly done
+# First Milestone - All Wiring and Assembly Done
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GzlZ3yV8Udk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For my first milestone, I assembled and wired the robot. The components of my robot are divided into three sections: Movement, Core, and Visuals. For Movement, I have two generic DC motors, two motor-powered wheels, a swiveling wheel, a plastic chassis, and an L298 H-Bridge motor driver. The Core section contains two battery packs, a switch, a generic breadboard, and a Raspberry Pi 4. As for Visuals, it contains a Raspberry Pi camera module and three Arduino ultrasonic sensors. 
