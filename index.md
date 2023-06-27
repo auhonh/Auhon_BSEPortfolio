@@ -45,7 +45,7 @@ Once the camera-related code was finished, I needed to find how close each ultra
 
 Now, these numbers mean nothing on their own, so I have to use the center of the rectangle and the distances to direct the motors when to run. For example, if the center of the ball is too far left or right, the motors need to turn in that direction, or if the ball is too far, then the robot needs to move towards it. Additionally, I still need to finish CADing and 3D printing the new chassis from my first milestone.
 
-<!--
+<!---
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 -->
