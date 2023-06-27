@@ -43,10 +43,12 @@ Now that I could code, getting the camera to return input was relatively easy be
 Once the camera-related code was finished, I needed to find how close each ultrasonic sensor was to the nearest object. There are a total of three sensors, one facing left, one facing right, and one facing forward. To begin, I powered each sensor by plugging their VCC and Ground pins into a breadboard, which I powered using pins on the Raspberry Pi. To get input, I plugged the Trigger and Echo pins directly into the Raspberry Pi. I then used these pins to find how long it took for a pulse to be sent forward and reflected back to the sensor. I then used math to convert the pulse length into centimeters and stored each of them in a variable, so I can refer to them later.
 
 Now, these numbers mean nothing on their own, so I have to use the center of the rectangle and the distances to direct the motors when to run. For example, if the center of the ball is too far left or right, the motors need to turn in that direction, or if the ball is too far, then the robot needs to move towards it. Additionally, I still need to finish CADing and 3D printing the new chassis from my first milestone.
+
 <!--
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 -->
+
 <!--
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs.
