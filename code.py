@@ -209,7 +209,23 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
                   time.sleep(0.05)
             stop()
             time.sleep(0.0125)
-     
+      elif(found == 1):
+            print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
+            print("area: ", area)
+            if (distanceC > 20 and area < 600):
+                  print("moving forward")
+                  forward()
+                  time.sleep(0.00625)
+            elif(centre_x<=-20 or centre_x>=20):
+                  if(centre_x<0):
+                        print("turning right")
+                        turnright()
+                        time.sleep(0.00625)
+                  elif(centre_x>0):
+                        print("turning left")
+                        turnleft()
+                        time.sleep(0.00625)
+      '''
       elif(found==1):
             print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
             if(area<initial):
@@ -272,6 +288,7 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
                         time.sleep(0.1)
                         stop()
                         time.sleep(0.1)
+      '''
       cv2.imshow("draw",frame)    
       rawCapture.truncate(0)  # clear the stream in preparation for the next frame
          
