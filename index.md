@@ -357,7 +357,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 |:--:|:--:|:--:|:--:|
 | Ultrasonic Sensors (x3)| ultrasonic sensors for distance tracking | $8.99 | <a href="https://a.co/d/iPUL5EN"> Link </a> |
 |:--:|:--:|:--:|:--:|
-
+| Generic DC motors and chassis| motors and wheels for robot mobility | $13.59 | <a href="https://a.co/d/d8Io2eJ"> Link </a> |
 
 
 <!--
