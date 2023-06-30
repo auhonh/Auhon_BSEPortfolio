@@ -355,9 +355,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 |:--:|:--:|:--:|:--:|
 | L298N H-Bridge | motor controller | $6.99 | <a href="https://a.co/d/jjrOBcA"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Ultrasonic Sensors (x3)| ultrasonic sensors for distance tracking | $8.99 | <a href="https://a.co/d/iPUL5EN"> Link </a> |
+| Ultrasonic Sensors (x3) | ultrasonic sensors for distance tracking | $8.99 | <a href="https://a.co/d/iPUL5EN"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Generic DC motors and chassis| motors and wheels for robot mobility | $13.59 | <a href="https://a.co/d/d8Io2eJ"> Link </a> |
+| Generic DC motors (x2) | motors and wheels for robot mobility | $13.59 | <a href="https://a.co/d/d8Io2eJ"> Link </a> |
 
 
 <!--
