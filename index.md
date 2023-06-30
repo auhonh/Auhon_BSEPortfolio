@@ -348,13 +348,11 @@ Don't forget to place the link of where to buy each component inside the quotati
 -->
 
 | **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
 | Raspberry Pi 4.0 | microcontroller for the robot | $104.95 | <a href="https://www.pishop.us/product/raspberry-pi-4b-starter-kit-pro/"> Link </a> |
-|:--:|:--:|:--:|:--:|
 | Raspberry Pi Camera | camera for object detection | $12.99 | <a href="https://a.co/d/2Kqccgh"> Link </a> |
-|:--:|:--:|:--:|:--:|
 | L298N H-Bridge | motor controller | $6.99 | <a href="https://a.co/d/jjrOBcA"> Link </a> |
-|:--:|:--:|:--:|:--:|
+| Ultrasonic Sensors (x3)| ultrasonic sensors for distance tracking | $8.99 | <a href="https://a.co/d/iPUL5EN"> Link </a> |
+
 
 
 <!--
