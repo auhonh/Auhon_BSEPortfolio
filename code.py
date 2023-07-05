@@ -88,34 +88,34 @@ GPIO.setup(MOTOR2B, GPIO.OUT)
 GPIO.setup(MOTOR2E, GPIO.OUT)
 
 def forward():
-      GPIO.output(MOTOR1B, GPIO.HIGH)
-      GPIO.output(MOTOR1E, GPIO.LOW)
-      GPIO.output(MOTOR2B, GPIO.HIGH)
-      GPIO.output(MOTOR2E, GPIO.LOW)
+      GPIO.output(MOTOR1B, True)
+      GPIO.output(MOTOR1E, False)
+      GPIO.output(MOTOR2B, True)
+      GPIO.output(MOTOR2E, False)
      
 def reverse():
-      GPIO.output(MOTOR1B, GPIO.LOW)
-      GPIO.output(MOTOR1E, GPIO.HIGH)
-      GPIO.output(MOTOR2B, GPIO.LOW)
-      GPIO.output(MOTOR2E, GPIO.HIGH)
+      GPIO.output(MOTOR1B, False)
+      GPIO.output(MOTOR1E, True)
+      GPIO.output(MOTOR2B, False)
+      GPIO.output(MOTOR2E, True)
      
 def turnright():
-      GPIO.output(MOTOR1B,GPIO.LOW)
-      GPIO.output(MOTOR1E,GPIO.HIGH)
-      GPIO.output(MOTOR2B,GPIO.HIGH)
-      GPIO.output(MOTOR2E,GPIO.LOW)
+      GPIO.output(MOTOR1B, False)
+      GPIO.output(MOTOR1E, True)
+      GPIO.output(MOTOR2B, True)
+      GPIO.output(MOTOR2E, False)
      
 def turnleft():
-      GPIO.output(MOTOR1B,GPIO.HIGH)
-      GPIO.output(MOTOR1E,GPIO.LOW)
-      GPIO.output(MOTOR2B,GPIO.LOW)
-      GPIO.output(MOTOR2E,GPIO.HIGH)
+      GPIO.output(MOTOR1B, True)
+      GPIO.output(MOTOR1E, False)
+      GPIO.output(MOTOR2B, False)
+      GPIO.output(MOTOR2E, True)
 
 def stop():
-      GPIO.output(MOTOR1E,GPIO.LOW)
-      GPIO.output(MOTOR1B,GPIO.LOW)
-      GPIO.output(MOTOR2E,GPIO.LOW)
-      GPIO.output(MOTOR2B,GPIO.LOW)
+      GPIO.output(MOTOR1E, False)
+      GPIO.output(MOTOR1B, False)
+      GPIO.output(MOTOR2E, False)
+      GPIO.output(MOTOR2B, False)
      
 #Image analysis work
 def segment_colour(frame):    #returns only the red colors in the frame
@@ -196,27 +196,57 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
             centre_x-=80
             centre_y=6--centre_y
             print (centre_x, centre_y)
-      initial=400
+      initial=800
       flag=0
       #GPIO.output(LED_PIN,GPIO.LOW)
       if(found==0):
             #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
             if flag==0:
-                  turnright()
+                  turnleft()
                   time.sleep(0.05)
             else:
-                  turnleft()
+                  turnright()
                   time.sleep(0.05)
             stop()
             time.sleep(0.0125)
+      
+      elif(found==1):
+            print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
+            if(area < 800): 
+                  print("forward")
+                  forward()
+                  time.sleep(0.1)
+                  stop()
+                  time.sleep(0.00625)
+            elif(area>=initial):
+                  if(distanceC>10):
+                        #it brings coordinates of ball to center of camera's imaginary axis.
+                        if(centre_x<=-20 or centre_x>=20):
+                              if(centre_x<0):
+                                    flag=0
+                                    print("right")
+                                    turnright()
+                                    time.sleep(0.05)
+                              if(centre_x>0):
+                                    flag=1
+                                    print("left")
+                                    turnleft()
+                                    time.sleep(0.05)
+                        
+                        stop()
+                        time.sleep(0.00625)
+                  else:
+                        stop()
+                        time.sleep(0.01)
+      '''
       elif(found == 1):
             print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
             print("area: ", area)
-            if (distanceC > 20 and area < 600):
+            if(distanceC > 20 and area < 600):
                   print("moving forward")
                   forward()
                   time.sleep(0.00625)
-            elif(centre_x<=-20 or centre_x>=20):
+            if(centre_x <= -20 or centre_x >= 20):
                   if(centre_x<0):
                         print("turning right")
                         turnright()
@@ -225,69 +255,6 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
                         print("turning left")
                         turnleft()
                         time.sleep(0.00625)
-      '''
-      elif(found==1):
-            print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
-            if(area<initial):
-                  if(distanceC<10):
-                        #if ball is too far but it detects something in front of it, then it avoid it and reaches the ball.
-                        if distanceR>=8:
-                              turnright()
-                              time.sleep(0.00625)
-                              stop()
-                              time.sleep(0.0125)
-                              forward()
-                              time.sleep(0.00625)
-                              stop()
-                              time.sleep(0.0125)
-                              turnleft()
-                              time.sleep(0.00625)
-                        elif distanceL>=8:
-                              turnleft()
-                              time.sleep(0.00625)
-                              stop()
-                              time.sleep(0.0125)
-                              forward()
-                              time.sleep(0.00625)
-                              stop()
-                              time.sleep(0.0125)
-                              turnright()
-                              time.sleep(0.00625)
-                        else:
-                              stop()
-                              time.sleep(0.01)
-                  else:
-                        #otherwise it moves forward
-                        forward()
-                        time.sleep(0.00625)
-            elif(area>=initial):
-                  initial2=6700
-                  if(area<initial2):
-                        if(distanceC>10):
-                              #it brings coordinates of ball to center of camera's imaginary axis.
-                              if(centre_x<=-20 or centre_x>=20):
-                                    if(centre_x<0):
-                                          flag=0
-                                          turnright()
-                                          time.sleep(0.025)
-                                    elif(centre_x>0):
-                                          flag=1
-                                          turnleft()
-                                          time.sleep(0.025)
-                              forward()
-                              time.sleep(0.00003125)
-                              stop()
-                              time.sleep(0.00625)
-                        else:
-                              stop()
-                              time.sleep(0.01)
-
-                  else:
-                        #if it founds the ball and it is too close it lights up the led.
-                        #GPIO.output(LED_PIN,GPIO.HIGH)
-                        time.sleep(0.1)
-                        stop()
-                        time.sleep(0.1)
       '''
       cv2.imshow("draw",frame)    
       rawCapture.truncate(0)  # clear the stream in preparation for the next frame
