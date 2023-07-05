@@ -10,8 +10,13 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 
 ![Headstone Image](logo.svg)
 -->
-<!--
-# Final Milestone - working robot + custom chassis (?)
+
+# Third Milestone - Finished Robot
+For my third milestone, I coded the motors to respond to output from the camera and the ultrasonic sensors. If the ball is too far to the right or left, the robot will turn right or left respectively. If the ball is in front of the robot and a certain distance away, the robot will move forward. However, this only works when the ball is in the field of vision of the camera, so in order to locate the ball when it rolls out of view, the robot rotates in the direction that it last saw the ball. 
+
+
+
+
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
@@ -21,7 +26,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
--->
+
 
 # Second Milestone - Object Tracking Finished
 <iframe width="560" height="315" src="https://www.youtube.com/embed/smtitpBq4H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -45,12 +50,12 @@ Currently, the Movement section has two motor-powered wheels  mounted to the DC 
 
 The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. Right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis to better accommodate the various electronics.
 
-<!---
+<!--
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 -->
 
-<!--
+
 # Code
 
 ```python
@@ -340,7 +345,7 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 
 GPIO.cleanup() #free all the GPIO pins
 ```
--->
+
 <!--
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
