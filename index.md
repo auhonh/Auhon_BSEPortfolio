@@ -14,8 +14,7 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 # Third Milestone - Finished Robot
 For my third milestone, I coded the motors to respond to output from the camera and the ultrasonic sensors. If the ball is too far to the right or left, the robot will turn right or left respectively. If the ball is in front of the robot and a certain distance away, the robot will move forward. However, this only works when the ball is in the field of vision of the camera, so in order to locate the ball when it rolls out of view, the robot rotates in the direction that it last saw the ball. 
 
-
-
+Before coding, I rewired the motors, a
 
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
