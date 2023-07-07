@@ -12,6 +12,7 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 -->
 
 # Third Milestone - Finished Robot
+<!--
 For my third milestone, I coded the motors to respond to output from the camera and the ultrasonic sensors. If the ball is too far to the right or left, the robot will turn right or left respectively. If the ball is in front of the robot and a certain distance away, the robot will move forward. However, this only works when the ball is in the field of vision of the camera, so in order to locate the ball when it rolls out of view, the robot rotates in the direction that it last saw the ball. 
 
 Before coding, I rewired the motors, a
@@ -21,12 +22,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
+-->
+  
 # Second Milestone - Object Tracking Finished
 <iframe width="560" height="315" src="https://www.youtube.com/embed/smtitpBq4H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
