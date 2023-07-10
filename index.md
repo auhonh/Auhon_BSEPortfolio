@@ -23,7 +23,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 -->
-  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Io0Sug-JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 # Second Milestone - Object Tracking Finished
 <iframe width="560" height="315" src="https://www.youtube.com/embed/smtitpBq4H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
