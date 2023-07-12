@@ -1,5 +1,5 @@
 # import the necessary packages
-from picamera.array import PiRGBArray     #As there is a resolution problem in raspberry pi, will not be able to capture frames by VideoCapture
+from picamera.array import PiRGBArray     
 from picamera import PiCamera
 import RPi.GPIO as GPIO
 import time
@@ -19,8 +19,8 @@ GPIO_ECHO2 = 35
 GPIO_TRIGGER3 = 40      #Right ultrasonic sensor
 GPIO_ECHO3 = 37
 
-MOTOR1B = 10  #Left Motor
-MOTOR1E = 12
+MOTOR1B = 16  #Left Motor
+MOTOR1E = 10
 
 MOTOR2B = 11  #Right Motor
 MOTOR2E = 13
@@ -174,7 +174,7 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       centre_x=0.
       centre_y=0.
       hsv1 = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-      mask_red = segment_colour(frame)      #masking red the frame
+      mask_red = segment_colour(frame)      
       loct,area = find_blob(mask_red)
       x,y,w,h = loct
      
@@ -200,7 +200,6 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       flag=0
       #GPIO.output(LED_PIN,GPIO.LOW)
       if(found==0):
-            #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
             if flag==0:
                   turnleft()
                   time.sleep(0.05)
@@ -212,50 +211,28 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       
       elif(found==1):
             print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
-            if(area < 800): 
+            
+            if(centre_x<0):
+                  flag=0
+                  print("right")
+                  turnright()
+                  time.sleep(0.1)
+            if(centre_x>0):
+                  flag=1
+                  print("left")
+                  turnleft()
+                  time.sleep(0.1)
+            
+            stop()
+            time.sleep(0.00625)
+                  
+            if(area < 1200): 
                   print("forward")
                   forward()
                   time.sleep(0.1)
-                  stop()
-                  time.sleep(0.00625)
-            elif(area>=initial):
-                  if(distanceC>10):
-                        #it brings coordinates of ball to center of camera's imaginary axis.
-                        if(centre_x<=-20 or centre_x>=20):
-                              if(centre_x<0):
-                                    flag=0
-                                    print("right")
-                                    turnright()
-                                    time.sleep(0.05)
-                              if(centre_x>0):
-                                    flag=1
-                                    print("left")
-                                    turnleft()
-                                    time.sleep(0.05)
-                        
-                        stop()
-                        time.sleep(0.00625)
-                  else:
-                        stop()
-                        time.sleep(0.01)
-      '''
-      elif(found == 1):
-            print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
-            print("area: ", area)
-            if(distanceC > 20 and area < 600):
-                  print("moving forward")
-                  forward()
-                  time.sleep(0.00625)
-            if(centre_x <= -20 or centre_x >= 20):
-                  if(centre_x<0):
-                        print("turning right")
-                        turnright()
-                        time.sleep(0.00625)
-                  elif(centre_x>0):
-                        print("turning left")
-                        turnleft()
-                        time.sleep(0.00625)
-      '''
+                  #stop()
+                  time.sleep(0.00625)  
+      
       cv2.imshow("draw",frame)    
       rawCapture.truncate(0)  # clear the stream in preparation for the next frame
          
