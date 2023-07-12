@@ -17,7 +17,7 @@ For my third milestone, I coded the motors to respond to output from the camera 
 
 This works using the camera and the three ultrasonic sensors. Using the front camera, it detects the location of the ball relative to the center of the camera. If the ball is too far to the left, the motors will turn the robot left, and vice versa when the ball is too far to the right. Additionally, the program calculates the area of the bounding box to get a general distance for how far the ball is, and it uses this in combination with all three ultrasonic sensors to determine when to move forward or stop. For example, if the area of the bounding box is small enough and the distance on the center sensor is large enough, the robot will move forward, along with many other combinations of output from the camera and sensors.
 
-Initially, this did not work, so I began to troubleshoot. I started with 
+<!--Initially, this did not work, so I began to troubleshoot. I started with -->
 
 
 
