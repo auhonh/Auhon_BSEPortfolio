@@ -20,12 +20,6 @@ This works using the camera and the three ultrasonic sensors. Using the front ca
 Initially, this did not work, so I began to troubleshoot. I started with 
 
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
-
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Io0Sug-JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
