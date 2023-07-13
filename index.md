@@ -13,15 +13,14 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 
 # Third Milestone - Finished Robot
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Io0Sug-JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 For my third milestone, I coded the motors to respond to output from the camera and the ultrasonic sensors. If the ball is too far to the right or left, the robot will turn right or left respectively. If the ball is in front of the robot and a certain distance away, the robot will move forward. However, this only works when the ball is in the field of vision of the camera, so in order to locate the ball when it rolls out of view, the robot rotates in the direction that it last saw the ball. 
 
 This works using the camera and the three ultrasonic sensors. Using the front camera, it detects the location of the ball relative to the center of the camera. If the ball is too far to the left, the motors will turn the robot left, and vice versa when the ball is too far to the right. Additionally, the program calculates the area of the bounding box to get a general distance for how far the ball is, and it uses this in combination with all three ultrasonic sensors to determine when to move forward or stop. For example, if the area of the bounding box is small enough and the distance on the center sensor is large enough, the robot will move forward, along with many other combinations of output from the camera and sensors.
 
 <!--Initially, this did not work, so I began to troubleshoot. I started with -->
 
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Io0Sug-JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Second Milestone - Object Tracking Finished
 <iframe width="560" height="315" src="https://www.youtube.com/embed/smtitpBq4H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
