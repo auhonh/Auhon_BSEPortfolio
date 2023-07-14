@@ -3,7 +3,7 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Auhon H. | Homestead High | Mechanical Engineering | Incoming Junior
+| Auhon H. | Homestead High | Engineering | Incoming Junior
 
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
@@ -67,8 +67,6 @@ The current chassis is a generic plastic base, making it hard to mount all of th
 | CV Trick | OpenCV ML model compatibility info | <a href="https://cv-tricks.com/how-to/running-deep-learning-models-in-opencv/"> Link </a> |
 
 
-
-
 <!--
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resources to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
@@ -99,13 +97,11 @@ GPIO_ECHO2 = 35
 GPIO_TRIGGER3 = 40      #Right ultrasonic sensor
 GPIO_ECHO3 = 37
 
-MOTOR1B = 10  #Left Motor
-MOTOR1E = 12
+MOTOR1B = 16  #Left Motor
+MOTOR1E = 10
 
 MOTOR2B = 11  #Right Motor
 MOTOR2E = 13
-
-#LED_PIN = 13  #If it finds the ball, then it will light up the led
 
 # Set pins as output and input
 GPIO.setwarnings(False)
@@ -115,7 +111,6 @@ GPIO.setup(GPIO_TRIGGER2,GPIO.OUT)  # Trigger
 GPIO.setup(GPIO_ECHO2,GPIO.IN)
 GPIO.setup(GPIO_TRIGGER3,GPIO.OUT)  # Trigger
 GPIO.setup(GPIO_ECHO3,GPIO.IN)
-#GPIO.setup(LED_PIN,GPIO.OUT)
 
 # Set trigger to False (Low)
 GPIO.output(GPIO_TRIGGER1, False)
@@ -157,7 +152,6 @@ def sonar(GPIO_TRIGGER,GPIO_ECHO):
       # round to a reasonable number of sig figs
       distance = round(distance, 2) 
      
-      #print ("Distance : %.1f" % distance)
       # Reset GPIO settings
       return distance
 
@@ -221,7 +215,7 @@ def find_blob(blob): #returns the red colored circle
         if (area >largest_contour) :
             largest_contour=area
             cont_index=idx
-                              
+
     r=(0,0,1,1)
     if len(contours) > 0:
         r = cv2.boundingRect(contours[cont_index])
@@ -246,7 +240,6 @@ time.sleep(0.001)
  
 # capture frames from the camera
 for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
-      #grab the raw NumPy array representing the image, then initialize the timestamp and occupied/unoccupied text
       frame = image.array
       frame=cv2.flip(frame,1)
       global centre_x
@@ -254,7 +247,7 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       centre_x=0.
       centre_y=0.
       hsv1 = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-      mask_red = segment_colour(frame)      #masking red the frame
+      mask_red = segment_colour(frame)      
       loct,area = find_blob(mask_red)
       x,y,w,h = loct
      
@@ -280,7 +273,6 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       flag=0
       #GPIO.output(LED_PIN,GPIO.LOW)
       if(found==0):
-            #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
             if flag==0:
                   turnleft()
                   time.sleep(0.05)
@@ -292,52 +284,30 @@ for image in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
       
       elif(found==1):
             print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
-            if(area < 800): 
+            
+            if(centre_x<0):
+                  flag=0
+                  print("right")
+                  turnright()
+                  time.sleep(0.1)
+            if(centre_x>0):
+                  flag=1
+                  print("left")
+                  turnleft()
+                  time.sleep(0.1)
+            
+            stop()
+            time.sleep(0.00625)
+                  
+            if(area < 1200): 
                   print("forward")
                   forward()
                   time.sleep(0.1)
-                  stop()
-                  time.sleep(0.00625)
-            elif(area>=initial):
-                  if(distanceC>10):
-                        #it brings coordinates of ball to center of camera's imaginary axis.
-                        if(centre_x<=-20 or centre_x>=20):
-                              if(centre_x<0):
-                                    flag=0
-                                    print("right")
-                                    turnright()
-                                    time.sleep(0.05)
-                              if(centre_x>0):
-                                    flag=1
-                                    print("left")
-                                    turnleft()
-                                    time.sleep(0.05)
-                        
-                        stop()
-                        time.sleep(0.00625)
-                  else:
-                        stop()
-                        time.sleep(0.01)
-      '''
-      elif(found == 1):
-            print("distanceR = ", distanceR, ", distanceC = ", distanceC, ", distanceL = ", distanceL)
-            print("area: ", area)
-            if(distanceC > 20 and area < 600):
-                  print("moving forward")
-                  forward()
-                  time.sleep(0.00625)
-            if(centre_x <= -20 or centre_x >= 20):
-                  if(centre_x<0):
-                        print("turning right")
-                        turnright()
-                        time.sleep(0.00625)
-                  elif(centre_x>0):
-                        print("turning left")
-                        turnleft()
-                        time.sleep(0.00625)
-      '''
+                  #stop()
+                  time.sleep(0.00625)  
+      
       cv2.imshow("draw",frame)    
-      rawCapture.truncate(0)  # clear the stream in preparation for the next frame
+      rawCapture.truncate(0)
          
       if(cv2.waitKey(1) & 0xff == ord('q')):
             break
