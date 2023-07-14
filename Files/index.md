@@ -5,11 +5,8 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 |:--:|:--:|:--:|:--:|
 | Auhon H. | Homestead High | Engineering | Incoming Junior
 
-<!--
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+![image0](https://github.com/auhonh/Auhon_BSEPortfolio/assets/89406623/d82a6655-1ea7-4c9c-8157-a21ec5a104f5)
 
-![Headstone Image](logo.svg)
--->
 # Final Milestone - Modifications
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2WKo5afHk1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
