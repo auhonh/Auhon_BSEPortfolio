@@ -12,6 +12,13 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 -->
 # Final Milestone - Modifications
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2WKo5afHk1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+I had two main modifications, a custom CADed and 3D-printed chassis, and implementation of an ML model. 
+
+The chassis is a two-tiered system. The top plate houses my electronics, which include the Raspberry Pi 4, H-bridge, and perfboard. The bottom plate has the motors, wheels, ultrasonic sensors, camera, and power sources mounted to it. Every component has its own specific holes or mounting system on each plate that holds it in place. I started with CADing both plates in Onshape and utilized some COTS (commercial off-the-shelf) libraries to digitally assemble my robot with the new plates. After verifying that the plates would work, I 3D-printed both of them with generic PLA. Once they were printed, I disassembled my robot and reassembled it with the new plates. 
+
+Once I had verified that the new robot worked with the new chassis, I began my second modification. In this modification, I downloaded a pre-trained ML model to use with my camera. This model was trained on the COCO (Common Objects in Context) library but only worked on pre-downloaded images. Because of this, I wrote code that gave the model input from my Raspberry Pi Camera. Once this was working, I modified the model to only search for people, and had it isolate one specific person to track. Once this was done, I had the motors track the person in the same way it does with the red ball, allowing it to follow a person rather than the ball.
 
 # Third Milestone - Finished Robot
 
@@ -350,4 +357,4 @@ The major components of this project are a PCB, connecting a lever, an LED, a mo
 
 When the lever is flicked by the user, the motor rotates, moving the arm towards the lever and away from the switch, causing the LED to turn green and the arm to rotate towards the lever. When the arms hits the lever, the LED changes to red and the motor starts rotating in the opposite direction, moving the arm back down until it reaches it default state. In this state, the switch is pressed, turning the LED off. 
 
-
+<a href="https://www.spikenzielabs.com/Catalog/useless-machine/the-useless-machine-kit-diy-soldering-edition"> Link </a>
