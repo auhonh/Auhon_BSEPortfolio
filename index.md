@@ -20,6 +20,7 @@ The chassis is a two-tiered system. The top plate houses my electronics, which i
 
 Once I had verified that the new robot worked with the new chassis, I began my second modification. In this modification, I downloaded a pre-trained ML model to use with my camera. This model was trained on the COCO (Common Objects in Context) library but only worked on pre-downloaded images. Because of this, I wrote code that gave the model input from my Raspberry Pi Camera. Once this was working, I modified the model to only search for people, and had it isolate one specific person to track. Once this was done, I had the motors track the person in the same way it does with the red ball, allowing it to follow a person rather than the ball.
 
+
 # Third Milestone - Finished Robot
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Io0Sug-JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -52,6 +53,21 @@ For my first milestone, I assembled and wired the robot. The components of my ro
 Currently, the Movement section has two motor-powered wheels  mounted to the DC motors. These are in turn mounted to the back of the plastic chassis. The swivel wheel is attached to the front of the chassis with standoffs, and the H-Bridge is wired to the motors and the Raspberry Pi. For the Core section, there are two battery packs connected to the switch, which powers the H-bridge and Raspberry Pi when turned on. Additionally, the Raspberry Pi supplies power to the camera module and breadboard, the latter of which powers all of the ultrasonic sensors. The final section, Visuals, has the camera module connected to the Raspberry Pi with its ribbon cable, powering it. The ultrasonic sensors have their VCC and Ground wires plugged into the breadboard, so the Raspberry Pi can power them, and the Trigger and Echo wires connect directly to the Raspberry Pi, providing input. 
 
 The current chassis is a generic plastic base, making it hard to mount all of the electrical components on the robot itself. As a result, I had to shorten and lengthen certain wires using wire strippers, a soldering iron, heat-shrink tubing, and more in order to mount them properly. Right now, I still need to write code that allows the Raspberry Pi to command the motors to turn on depending on inputs from the camera and ultrasonic sensors. I also need to CAD and 3D print a new chassis to better accommodate the various electronics.
+
+# Resources
+
+| **Resource** | **Usage** | **Link** |
+|:--:|:--:|:--:|
+| COCO library | ML training dataset | <a href="https://cocodataset.org/#overview"> Link </a> |
+|:--:|:--:|:--:|
+| Raspberry Pi Documentation | Pi 4 functionality info | <a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"> Link </a> |
+|:--:|:--:|:--:|
+| Onshape | CAD software | <a href="cad.onshape.com"> Link </a> |
+|:--:|:--:|:--:|
+| CV Trick | OpenCV ML model compatibility info | <a href="https://cv-tricks.com/how-to/running-deep-learning-models-in-opencv/"> Link </a> |
+
+
+
 
 <!--
 # Schematics 
