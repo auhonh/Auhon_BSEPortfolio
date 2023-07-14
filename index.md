@@ -1,5 +1,5 @@
 # Computer Vision Robot
-My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes ultrasonic sensors to detect a red ball and both turn and move toward it. It does this using a Raspberry Pi 4 where code is loaded and run, determining when each of the motors should run depending on the output of the ultrasonic sensors. 
+My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes ultrasonic sensors and a camera in order to locate and move toward a red ball. It does this using a Raspberry Pi 4 where code is loaded and run, determining when each of the motors should run depending on the output of the ultrasonic sensors and camera. 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -10,6 +10,8 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 
 ![Headstone Image](logo.svg)
 -->
+# Final Milestone - Modifications
+
 
 # Third Milestone - Finished Robot
 
@@ -19,7 +21,7 @@ For my third milestone, I coded the motors to respond to output from the camera 
 
 This works using the camera and the three ultrasonic sensors. Using the front camera, it detects the location of the ball relative to the center of the camera. If the ball is too far to the left, the motors will turn the robot left, and vice versa when the ball is too far to the right. Additionally, the program calculates the area of the bounding box to get a general distance for how far the ball is, and it uses this in combination with all three ultrasonic sensors to determine when to move forward or stop. For example, if the area of the bounding box is small enough and the distance on the center sensor is large enough, the robot will move forward, along with many other combinations of output from the camera and sensors.
 
-<!--Initially, this did not work, so I began to troubleshoot. I started with -->
+Initially, this did not work, so I began to troubleshoot. I started with separately powering each of the motors with an external power source. Because this worked, I then powered the motor pins through the Raspberry Pi. The motors did not work after I did this, so I knew that the problem was either in the wires or the H-Bridge motor controller. Since the 
 
 
 # Second Milestone - Object Tracking Finished
@@ -334,16 +336,10 @@ GPIO.cleanup() #free all the GPIO pins
 | Ultrasonic Sensors (x3) | ultrasonic sensors for distance tracking | $8.99 | <a href="https://a.co/d/iPUL5EN"> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Generic DC motors (x2) | motors and wheels for robot mobility | $13.59 | <a href="https://a.co/d/d8Io2eJ"> Link </a> |
-
-
-<!--
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-To watch the BSE tutorial on how to create a portfolio, click here.
--->
+|:--:|:--:|:--:|:--:|
+| Battery Pack | power for Raspberry Pi | $23.99 | <a href="https://a.co/d/aeIm2Xm"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Wires, Batteries, Bolts, etc. | generic parts to assemble and test robot | ~$30.00 |  |
 
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2-qvxFV8pM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
