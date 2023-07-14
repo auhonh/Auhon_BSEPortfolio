@@ -5,9 +5,7 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 |:--:|:--:|:--:|:--:|
 | Auhon H. | Homestead High | Engineering | Incoming Junior
 
-
-![Headstone Image](imageo0.png)
-
+![image0](https://github.com/auhonh/Auhon_BSEPortfolio/assets/89406623/d82a6655-1ea7-4c9c-8157-a21ec5a104f5)
 
 # Final Milestone - Modifications
 
