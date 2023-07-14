@@ -14,7 +14,7 @@ My project is a Computer Vision Robot. It is a three-wheeled robot that utilizes
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2WKo5afHk1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-I had two main modifications, a custom CADed and 3D-printed chassis, and implementation of an ML model. 
+I had two main modifications, a custom CADed and 3D-printed chassis, and the implementation of an ML model. 
 
 The chassis is a two-tiered system. The top plate houses my electronics, which include the Raspberry Pi 4, H-bridge, and perfboard. The bottom plate has the motors, wheels, ultrasonic sensors, camera, and power sources mounted to it. Every component has its own specific holes or mounting system on each plate that holds it in place. I started with CADing both plates in Onshape and utilized some COTS (commercial off-the-shelf) libraries to digitally assemble my robot with the new plates. After verifying that the plates would work, I 3D-printed both of them with generic PLA. Once they were printed, I disassembled my robot and reassembled it with the new plates. 
 
